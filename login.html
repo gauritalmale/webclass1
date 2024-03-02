@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Login Form </title>
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <section class="container">
+
+        <h2> Login Form </h2>
+        <form name="myForm" method="post" action="javascript:void(0);" onsubmit="return myfunction();">
+            <label for="userId"><span> Email or Phone </span></label>
+            <input type="text" name="uname" class="inputText" placeholder="User Name">
+
+            <label for="password"><span> Password </span></label>
+
+            <input type="password" name="pass" class="inputText" placeholder="Password">
+
+            <button class="animated-button" name="log" value="Login">Submit</button>
+        </form>
+    </section>
+    <script type="text/javascript">
+        function myfunction() {
+            var un = document.forms["myForm"]["uname"].value;
+            var pw = document.forms["myForm"]["pass"].value;
+            if (un == "student" && pw == "12345") {
+                window.location.href = "Gauri.html"; // Replace "index.html" with the desired URL
+                return false; // Prevent the form from submitting
+            } else {
+                alert("Invalid Username and Password");
+                return false; // Prevent the form from submitting
+            }
+        }
+    </script>
+
+
+</body>
+
+</html>
